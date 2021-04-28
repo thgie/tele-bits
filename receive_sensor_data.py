@@ -5,7 +5,11 @@ radio.config(group=2)
 radio.on()
 
 while True:
-    message = radio.receive()
-
-    if message:
+    details = radio.receive_full()
+    if details:
+        message, rssi, timestamp = details
         print(message)
+        print("rssi", rssi)
+#     message = radio.receive()
+#     if message:
+#         print(message)
