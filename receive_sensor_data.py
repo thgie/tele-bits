@@ -8,8 +8,5 @@ while True:
     details = radio.receive_full()
     if details:
         message, rssi, timestamp = details
-        print(message)
-        print("rssi", rssi)
-#     message = radio.receive()
-#     if message:
-#         print(message)
+        print(str(message, 'UTF-8'))
+        print("rssi:" + str(rssi))
